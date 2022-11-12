@@ -20,10 +20,19 @@ html{
 }
 
 
-
+::-webkit-scrollbar {
+    appearance: none;
+    display: none;
+}
 
 .hero{
-    background-image: url("images/home-bg.jpg");
+    background-image: url('/images/home-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 38rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
  /*
@@ -40,7 +49,6 @@ html{
 
 .tt1{
     margin-bottom: 10px;
-    font-size: 20px;
     color: grey;
 }
 
@@ -59,9 +67,6 @@ html{
     justify-content: center;
 }
 
-.tt3{
-    font-size: 11px;
-}
 
 .btn{
     font-size: 20px;
@@ -70,12 +75,22 @@ html{
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    color: white;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 25px;
     margin-bottom: 50px;
+    transition: .7s ease all;
+}
+.btn:hover{
+    background-color: white;
+    color: orangered;
+    
 }
 
 .container {
@@ -148,13 +163,13 @@ nav div .menu ul{
 }  
 nav div .menu ul li{
     padding: 2px 8px;
-    text-align: center;
 }  
 nav div .menu ul li a{
     text-decoration: none;
     color: black;
     font-size: 14px;
     line-height: 1.5;
+    text-align: left;
 }  
 .desktop_menu{
     display: none !important;
@@ -167,6 +182,7 @@ nav div .menu ul li a{
     max-width: 100%;
     background: #fff;
     width: auto;
+    display:none;
     padding: 0;
     height: 100vh;
     height: 100%;
@@ -175,17 +191,230 @@ nav div .menu ul li a{
 .mobile_menu ul{
    flex: 1 1 auto;
    display: flex;
-    flex-direction: column;
+   flex-direction: column;
    width: 100%;
    max-width: 100%;
 }
 .mobile_menu ul li:hover a{
-    color: gray;
-}
-.mobile_menu ul li:hover {
-    background: #ccc;
+    color: orangered;
 }
 
+.mobile_menu ul li {
+  width: 100%;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.mobile_menu {
+ width: 100%;
+ height: fit-content;
+ padding-bottom: 20px;
+ z-index: 99;
+
+}
+nav div .hamMenu {
+    display: block !important;
+    z-index: 999;
+}
+nav div .hamMenu :nth-child(2) {
+    display: none;
+    z-index: 999;
+    
+}
+.logo {
+    z-index:999;
+}
+nav div .hamMenu :nth-child(1):hover,
+nav div .hamMenu :nth-child(2):hover {
+    background: #ccc;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+
+/* HEROE SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.sub_hero {
+    width: 100%;
+    margin: auto;
+
+}
+.main_title {
+    text-align: center;
+}
+.main_title .title1, 
+.main_title .title2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px !important;
+}
+.main_title .title3{
+    font-size: 16px;
+    width: 70%;
+    margin: auto;
+    line-height: 28px;
+} 
+
+.btn {
+    font-size: 20px;
+    padding: 15px 50px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+
+/* MY WORK SECTION */
+.myWork {
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+}
+.myw_sib{
+    padding: 0 8px;
+}
+.myw_sib .title h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.main_box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.main_box .box1,
+.main_box .box2,
+.main_box .box3{
+    padding: 50px 20px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 1.6;
+
+}
+.main_box .box1 .box_i i,
+.main_box .box2 .box_i i,
+.main_box .box3 .box_i i{
+    font-size: 80px;
+}
+.main_box .box1 h3,
+.main_box .box2 h3,
+.main_box .box3 h3{
+    margin: 30px auto;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* PORTFOLI0 SECTION */
+
+input[type=radio]{
+    display: none;
+}
+
+.portfolio .port_sib .port_title .ptt{
+    margin: 30px auto;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.portfolio{
+    background-color: #f1f1f1;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+}
+
+.port_sib{
+    padding: 0 8px;
+}
+
+.port_tabs{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "tab1 tab2 tab3 "
+    "tab4 tab5";
+    gap:10px;
+    margin: auto;
+}
+
+.port_tabs label{
+    font-size: 15px;
+    background-color: orangered;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.port_gallary{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.port_gly{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.all_gly{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.all_gly img{
+    width: 100%;
+    height: fit-content;
+}
+
+.all_gly .bx1_gly:hover .ph1{
+    display: block !important;   
+}
+
+.port_hover{
+    display: none;
+    transition: .9s ease all;
+}
+.port_hover div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff450096;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    margin: auto;
+    color: white;
+    text-align: center;
+    transition: .9s ease all;
+}
+/* END OF PORTFOLIO SECTION */
 
 
 /*

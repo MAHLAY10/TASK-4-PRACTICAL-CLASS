@@ -281,8 +281,9 @@ nav div .hamMenu :nth-child(2):hover {
 }
 .myw_sib .title h1 {
     margin: 30px auto;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 500;
+    color: #303030;
 }
 
 .main_box {
@@ -297,12 +298,19 @@ nav div .hamMenu :nth-child(2):hover {
     border: 1px solid black;
     text-align: center;
     line-height: 1.6;
-
 }
+
+.main_box .box1:hover,
+.main_box .box2:hover,
+.main_box .box3:hover{
+    border: 1px solid orangered;
+}
+
 .main_box .box1 .box_i i,
 .main_box .box2 .box_i i,
 .main_box .box3 .box_i i{
     font-size: 80px;
+    color: #606060;
 }
 .main_box .box1 h3,
 .main_box .box2 h3,
@@ -312,71 +320,93 @@ nav div .hamMenu :nth-child(2):hover {
     font-weight: 600;
 }
 
+.tt3{
+    color: #606060;
+}
+
+.wrk_par{
+    color: #606060;
+}
+
+.sub_titwork h3{
+    color: orangered;
+}
+
 /* PORTFOLI0 SECTION */
 
 input[type=radio]{
     display: none;
 }
-
+.port_title{
+    margin-bottom: 50px;
+}
 .portfolio .port_sib .port_title .ptt{
     margin: 30px auto;
+    display: flex;
+    color: #303030;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
     font-weight: 500;
 }
 
 .portfolio{
-    background-color: #f1f1f1;
+    background-color: #f8f8f8;
     width: 100%;
     height: auto;
     padding: 100px 0;
 }
 
 .port_sib{
-    padding: 0 8px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .port_tabs{
     width: 100%;
-    max-width: 150px;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "tab1 tab2 tab3 "
-    "tab4 tab5";
+    align-items: center;
+    justify-content: center;
+    display: flex;
     gap:10px;
-    margin: auto;
+    margin-bottom: 40px;
 }
 
-.port_tabs label{
-    font-size: 15px;
+.port_tabs .all_tab:hover{
+    color: white;
+    transition-duration: 1s;
     background-color: orangered;
+}
+
+.port_tabs .all_tab{
+    width: 100%;
+    font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left:15px;
+    padding-right: 15px;
     font-weight: 500;
     border: none;
     cursor: pointer;
-    color: white;
-    margin: auto;
+    color: #9999;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+
 .port_gallary{
     height: auto;
     width: 100%;
-    max-width: 100%;
 }
 
 .port_gly{
     height: auto;
     width: 100%;
-    max-width: 100%;
     display: grid;
     grid-template-columns: 100%;
+    gap: 0px;
 }
 
 .all_gly{
@@ -384,20 +414,51 @@ input[type=radio]{
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
+    gap: 0px;
 }
 
 .all_gly img{
     width: 100%;
-    height: fit-content;
+
 }
 
 .all_gly .bx1_gly:hover .ph1{
     display: block !important;   
 }
+.all_gly .bx2_gly:hover .ph2{
+    display: block !important;   
+}
+.all_gly .bx3_gly:hover .ph3{
+    display: block !important;   
+}
+.all_gly .bx4_gly:hover .ph4{
+    display: block !important;   
+}
+.all_gly .bx5_gly:hover .ph5{
+    display: block !important;   
+}
+.all_gly .bx6_gly:hover .ph6{
+    display: block !important;   
+}
+.all_gly .bx7_gly:hover .ph7{
+    display: block !important;   
+}
+.all_gly .bx8_gly:hover .ph8{
+    display: block !important;   
+}
+.all_gly .bx9_gly:hover .ph9{
+    display: block !important;   
+}
+.all_gly .bx10_gly:hover .ph10{
+    display: block !important;   
+}
 
 .port_hover{
     display: none;
-    transition: .9s ease all;
+    transition: 1s ease;
+}
+.bx{
+    position: relative;
 }
 .port_hover div {
     position: absolute;
@@ -412,16 +473,426 @@ input[type=radio]{
     margin: auto;
     color: white;
     text-align: center;
-    transition: .9s ease all;
+    transition-duration: .8s;
 }
 /* END OF PORTFOLIO SECTION */
 
+/* SKILLS SECTION */
+.skills{
+    margin-left: 15px;
+    margin-right: 20px;
+}
 
-/*
-    INDICATING DESKTOP SCREENS - DESKTOP, LARGE SCREEN
- */
+.skills .subskill .myprofile .pro_title h1,
+.myskill .skl_title h1{
+    margin: 30px auto;
+    font-size: 60px;
+    font-weight: 500;
+    color: #303030;
+}
 
- 
+.pro_title{
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
 
+.sub_pro_title p{
+    font-size: 18px;
+    color: #606060;
+}
+
+.sub_pro_title p .pro{
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.sub_pro_title{
+    display: grid;
+    row-gap: 25px;
+}
+
+.bold1{
+    padding-right: 60px;
+}
+
+.bold2,
+.bold3,
+.bold6{
+    padding-right: 34px;
+}
+
+.bold4{
+    padding-right: 54px;
+}
+
+.bold5{
+    padding-right: 60px;
+}
+
+.bold11{
+    color: orangered;
+}
+
+.bold11:hover{
+    color: darkblue;
+    text-decoration-line: underline;
+}
+
+.myskill .skl_title{
+    margin-bottom: 50px;
+}
+
+.sub_skl_title p{
+    font-size: 17px;
+    line-height: 30px;
+    color: #606060;
+    font-weight: 40;
+}
+
+.myskill{
+    margin-bottom: 130px;
+}
+
+
+/* END OF SKILLS SECTION */
+
+/* ABOUT ME SECTION */
+
+.about{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+    background-image: url('/images/home-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 38rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about .sub_about .about_text .about_head p{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.about_sub_head h1{
+    color: orangered;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.about_sub_head{
+    margin-bottom: 50px;
+}
+
+.about_sub_text h5{
+    font-size: 17px;
+    line-height: 30px;
+    color: #606060;
+    font-weight: 40;
+}
+
+.about_sub_text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.free{
+    color: #337ab7;
+}
+
+.free:hover{
+    color: darkblue;
+    text-decoration-line: underline;
+}
+
+/* END OF ABOUT ME SECTION */
+
+/* CONTACT US SECTION */
+
+.contact_us{
+    width: 100%;
+}
+
+.facebook{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: #3b5998;
+}
+
+.facebook:hover,
+.twitter:hover,
+.pinterest:hover{
+    background-color: black;
+    transition-duration: 1s;
+}
+
+.fbk_text,
+.twt_text,
+.pin_text{
+    padding-left: 20px;
+    display: grid;
+    row-gap: 20px;
+}
+
+.fbk_head p,
+.twt_head p,
+.pin_head p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fbk_head_text h3,
+.twt_head_text h3,
+.pin_head_text h3{
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+}
+
+.twitter{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: #55acee;
+}
+
+.pinterest{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: #cc2127;
+}
+
+
+/* END OF CONTACT US SECTION */
+
+/* DROP A LINE SECTION */
+.drop_line{
+    margin-top: 130px;
+    width: 100%;
+}
+
+.drop_line .sub_drop_line .drop_line_head h2{
+    font-size: 60px;
+    font-weight: 500;
+    color: #303030;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.drop_line_form{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.forms{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullname,
+.your_email,
+.number,
+.subject,
+.message,
+.submit_btn{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.fullname:hover,
+.your_email:hover,
+.number:hover,
+.subject:hover,
+.message:hover,
+.submit_btn:hover{
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    
+}
+
+.fullname:focus,
+.your_email:focus,
+.number:focus,
+.subject:focus,
+.message:focus,
+.submit_btn:focus{
+    color: white;
+    background-color: black;
+}
+
+.fullname:active,
+.your_email:active,
+.number:active,
+.subject:active,
+.message:active,
+.submit_btn:active{
+    color: white;
+}
+
+.fullname:visited,
+.your_email:visited,
+.number:visited,
+.subject:visited,
+.message:visited,
+.submit_btn:visited{
+    color: white;
+}
+
+.message{
+    padding-bottom: 60px;
+}
+
+.submit_btn{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: orangered;
+}
+
+
+/* FOOTER SECTION */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.inner_footer p{
+    color: #606060;
+    font-size: 17px;
+}
+/* END OF FOOTER SECTION */
+
+/* END OF DROP A LINE SECTION */
+
+
+/*INDICATING DESKTOP SCREENS - DESKTOP, LARGE SCREEN */
+
+@media only screen and (min-width:768px) {
+    /* HERO SECTION */
+    .title3{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+/* END OF HERO SECTION */
+
+/* MY WORK SECTION */
+    .myw_sib .title{
+        padding-left: 200px;
+    }
+
+    .main_box{
+        display: flex;
+        flex-direction:row;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+/* END OF MY WORK SECTION */
+
+/* PORTFOLIO SECTION*/
+    .port_tabs .all_tab{
+        width: 100%;
+        font-size: 17px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left:15px;
+        padding-right: 15px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        color: #9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .port_sib{
+        padding-left: 400px;
+        padding-right: 400px;
+    }
+
+    .all_gly{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+/* END OF PORTFOLIO SECTION*/
+}
+
+/* +=========== MY SKILLS ======== */
+.navigator {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px auto;
+}
+.quality
+{
+    margin: 20px auto;
+}
+.text_skl{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+.progress, .progress-bar{
+    width:100%;
+    height: 3px;
+    border-radius: 50px;
+    position: relative;
+}
+.progress1{
+    width: 100%;
+    background-color: orangered;
+    border-radius: 50px;
+    display: flex;
+    z-index: 42;
+    position: absolute;
+}
+.progress2{
+    width: 90%;
+    background-color: orangered;
+    border-radius: 50px;
+    display: flex;
+    z-index: 42;
+    position: absolute;
+}
+.progress3{
+    width: 80%;
+    background-color: orangered;
+    border-radius: 50px;
+    display: flex;
+    z-index: 42;
+    position: absolute;
+}
+.progress_bar_back{
+    background: #eee;
+    border-radius: 50px;
+    height: 3px;
+    z-index: -3;
+    position: absolute;
+    width: 100%;
+}
+.text_skl span{
+    width: 10%;
+}
 
 

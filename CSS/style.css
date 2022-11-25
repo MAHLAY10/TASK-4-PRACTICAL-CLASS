@@ -355,7 +355,7 @@ input[type=radio]{
     background-color: #f8f8f8;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 0;
 }
 
 .port_sib{
@@ -478,6 +478,11 @@ input[type=radio]{
 /* END OF PORTFOLIO SECTION */
 
 /* SKILLS SECTION */
+
+.myprofile{
+    margin-top: 130px;
+}
+
 .skills{
     margin-left: 15px;
     margin-right: 20px;
@@ -492,7 +497,7 @@ input[type=radio]{
 }
 
 .pro_title{
-    margin-top: 130px;
+
     margin-bottom: 50px;
 }
 
@@ -546,7 +551,7 @@ input[type=radio]{
     font-size: 17px;
     line-height: 30px;
     color: #606060;
-    font-weight: 40;
+    font-weight: 400;
 }
 
 .myskill{
@@ -562,10 +567,10 @@ input[type=radio]{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 100px;
-    background-image: url('/images/home-bg.jpg');
+    background-image: url('/images/pexels-gdtography-911738.jpg');
     background-size: cover;
     width: 100%;
-    height: 38rem;
+    height: 39rem;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -590,8 +595,8 @@ input[type=radio]{
 .about_sub_text h5{
     font-size: 17px;
     line-height: 30px;
-    color: #606060;
-    font-weight: 40;
+    color: #303030;
+    font-weight: 500;
 }
 
 .about_sub_text{
@@ -609,6 +614,11 @@ input[type=radio]{
     text-decoration-line: underline;
 }
 
+.sub_about,
+.about_text{
+    height: 100%;
+}
+
 /* END OF ABOUT ME SECTION */
 
 /* CONTACT US SECTION */
@@ -618,6 +628,7 @@ input[type=radio]{
 }
 
 .facebook{
+    width: 100%;
     padding-top: 80px;
     padding-bottom: 100px;
     background-color: #3b5998;
@@ -650,22 +661,54 @@ input[type=radio]{
 .twt_head_text h3,
 .pin_head_text h3{
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 500;
     color: white;
 }
 
 .twitter{
+    width: 100%;
     padding-top: 80px;
     padding-bottom: 100px;
     background-color: #55acee;
 }
 
 .pinterest{
+    width: 100%;
     padding-top: 80px;
     padding-bottom: 100px;
     background-color: #cc2127;
 }
 
+.fbk_sec,
+.twt_sec,
+.pin_sec{
+    display: flex;
+}
+
+.fbk_icon,
+.twt_icon,
+.pin_icon{
+    border-radius: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    background-color: white;
+}
+
+.bxl-facebook,
+.bxl-twitter,
+.bxl-pinterest{
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #606060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
 
 /* END OF CONTACT US SECTION */
 
@@ -676,7 +719,7 @@ input[type=radio]{
 }
 
 .drop_line .sub_drop_line .drop_line_head h2{
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 500;
     color: #303030;
     text-align: center;
@@ -703,7 +746,7 @@ input[type=radio]{
 .subject,
 .message,
 .submit_btn{
-    border: 1px solid black;
+    border: 1px solid #606060;
     background-color: white;
     color: black;
     font-size: 15px;
@@ -807,6 +850,10 @@ input[type=radio]{
 /* END OF MY WORK SECTION */
 
 /* PORTFOLIO SECTION*/
+
+    .port_sib{
+        padding-top: 100px;
+    }
     .port_tabs .all_tab{
         width: 100%;
         font-size: 17px;
@@ -833,9 +880,68 @@ input[type=radio]{
         grid-template-columns: auto auto auto auto;
     }
 /* END OF PORTFOLIO SECTION*/
+
+/* MY SKILL SECTION */
+.subskill{
+    display: flex;
+    margin-left: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    column-gap: 70px;
+    height: 100%;
 }
 
-/* +=========== MY SKILLS ======== */
+.myprofile,
+.myskill{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* END OF MY SKILL SECTION */
+
+/* ABOUT ME SECTION */
+.sub_about{
+    margin-right: 100px;
+    margin-left: 50%;
+}
+.about{
+    padding-bottom: 100px;
+}
+
+/* END OF ABOUT ME SECTION */
+
+/* CONTACT US SECTION */
+.contact_us{
+    width: 100%;
+}
+
+.sub_contact_us{
+    display: flex;
+    width: 100%;
+}
+
+/* END OF CONTACT US SECTION */
+
+/* DROP LINE SECTION */
+    .drop_line .sub_drop_line .drop_line_form form{
+        padding-left: 17%;
+        padding-right: 17%;
+    }
+
+
+/* END OF DROP LINE SECTION */
+
+}
+
+/* MEDIA QUERY PART */
+
+/* +======= MY SKILLS +=====*/
+
 .navigator {
     display: flex;
     width: 100%;
@@ -894,5 +1000,15 @@ input[type=radio]{
 .text_skl span{
     width: 10%;
 }
+
+.navigator .text_skl strong,
+.navigator .text_skl span{
+    font-weight: 300;
+    font-size: 15px;
+    color: #606060;
+}
+
+/* +=====END OF SKILLS SECTION+===== */
+
 
 

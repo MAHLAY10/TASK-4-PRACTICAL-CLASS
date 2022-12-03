@@ -7,7 +7,6 @@
     <title>potfolio</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -29,7 +28,7 @@
     <div class="container">
       <!-- NAVBAR SECTION -->
 
-      <nav class="gen_bg_container">
+      <nav class="gen_bg_container" id="gen_bg_container">
         <div>
           <div class="logo">
             <h2>Demi Profile</h2>
@@ -38,57 +37,57 @@
           <div class="menu desktop_menu">
             <ul>
               <li>
-                <a href="#" id="home">Home</a>
+                <a href="#hero" id="home">Home</a>
               </li>
               <li>
-                <a href="#" id="my_work">My work</a>
+                <a href="#myWork" id="my_work">My work</a>
               </li>
               <li>
-                <a href="#" id="potfolio">Potfolio</a>
+                <a href="#portfolio" id="potfolio">Potfolio</a>
               </li>
               <li>
-                <a href="#" id="resume">Resume</a>
+                <a href="#skills" id="resume">Resume</a>
               </li>
               <li>
-                <a href="#" id="about_us">About us</a>
+                <a href="#about" id="about_us">About us</a>
               </li>
               <li>
-                <a href="#" id="contact_us">Contact us</a>
+                <a href="#contact" id="contact_us">Contact us</a>
               </li>
             </ul>
           </div>
           <div class="menu mobile_menu">
             <ul>
               <li>
-                <a href="#" id="home">Home</a>
+                <a href="#hero" id="home">Home</a>
               </li>
               <li>
-                <a href="#" id="my_work">My work</a>
+                <a href="#myWork" id="my_work">My work</a>
               </li>
               <li>
-                <a href="#" id="potfolio">Potfolio</a>
+                <a href="#portfolio" id="potfolio">Potfolio</a>
               </li>
               <li>
-                <a href="#" id="resume">Resume</a>
+                <a href="#skills" id="resume">Resume</a>
               </li>
               <li>
-                <a href="#" id="about_us">About us</a>
+                <a href="#about" id="about_us">About us</a>
               </li>
               <li>
-                <a href="#" id="contact_us">Contact us</a>
+                <a href="#contact" id="contact_us">Contact us</a>
               </li>
             </ul>
           </div>
           <div class="hamMenu">
-            <img src="images/bar.svg" />
-            <img src="images/close.png" />
+            <img id="open" src="images/bar.svg"/>
+            <img id="close" src="images/close.png"/>
           </div>
         </div>
       </nav>
       <!-- END OF NAVBAR SECTION -->
 
       <!-- HERO SECTION -->
-      <div class="hero">
+      <div class="hero" id="hero">
         <div class="sub_hero">
           <div class="main_title">
             <div class="title1"><h1 class="tt1">Demilade Adeoye</h1></div>
@@ -101,7 +100,7 @@
       <!-- END OF HERO SECTION -->
 
       <!-- MY WORK SECTION -->
-      <div class="myWork">
+      <div class="myWork" id="myWork">
         <div class="myw_sib">
           <div class="title"><h1>MY <strong>WORK</strong></h1></div>
           <div class="main_box">
@@ -140,7 +139,7 @@
       <!-- END OF MY WORK SECTION -->
 
       <!-- PORTFOLIO SECTION -->
-      <div class="portfolio">
+      <div class="portfolio" id="portfolio">
         <div class="port_sib">
           <div class="port_title"><h3 class="ptt">MY<strong>PORTFOLIO</strong></h3></div>
           <input type="radio" name="tab" id="All">
@@ -149,16 +148,16 @@
           <input type="radio" name="tab" id="Wordpress">
           <input type="radio" name="tab" id="Mobile">
           <div class="port_tabs">
-            <label id="tab1" for="All" class="all_tab">All</label>
-            <label id="tab2" for="HTML" class="all_tab">HTML</label>
-            <label id="tab3" for="Photoshop" class="all_tab">Photoshop</label>
-            <label id="tab4" for="Wordpress" class="all_tab">Wordpress</label>
-            <label id="tab5" for="Mobile" class="all_tab">Mobile</label>
+            <label id="tab1" onclick="openTab(event, 'all_gly')" for="All" class="active all_tab">All</label>
+            <label id="tab2" onclick="openTab(event, 'html_gly')" for="HTML" class="all_tab">HTML</label>
+            <label id="tab3" onclick="openTab(event, 'photoshop_gly')" for="Photoshop" class="all_tab">Photoshop</label>
+            <label id="tab4" onclick="openTab(event, 'wordpress_gly')" for="Wordpress" class="all_tab">Wordpress</label>
+            <label id="tab5" onclick="openTab(event, 'mobile_gly')" for="Mobile" class="all_tab">Mobile</label>
           </div>
         </div>
         <div class="port_gallary">
           <div class="port_gly">
-            <div class="all_gly">
+            <div id="all_gly" class="tabcontent ativecontent all_gly">
               <div class="bx bx1_gly">
                 <img src="images/portfolio-img1.jpg" alt="">
                 <div class="port_hover ph1">
@@ -261,78 +260,176 @@
 
 
             </div>
-            <div class="html_gly">
+            <div id="html_gly" class="tabcontent html_gly">
 
-              <div class="bx3_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+              <div class="bx bx1_gly">
+                <img src="images/portfolio-img1.jpg" alt="">
+                <div class="port_hover ph1">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="bx4_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+              <div class="bx bx2_gly">
+                <img src="images/portfolio-img2.jpg" alt="">
+                <div class="port_hover ph2">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
                 </div>
               </div>
 
-            </div>
-            <div class="photoshop_gly">
-
-              <div class="bx5_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+              <div class="bx bx3_gly">
+                <img src="images/portfolio-img3.jpg" alt="">
+                <div class="port_hover ph3">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="bx6_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-                </div>
-              </div>
-
-            </div>
-            <div class="wordpress_gly">
-
-              <div class="bx7_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
-                </div>
-              </div>
-
-              <div class="bx8_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+              <div class="bx bx4_gly">
+                <img src="images/portfolio-img4.jpg" alt="">
+                <div class="port_hover ph4">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
                 </div>
               </div>
 
             </div>
-            <div class="mobile_gly">
+            <div id="photoshop_gly" class="tabcontent photoshop_gly">
 
-              <div class="bx9_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+              <div class="bx bx1_gly">
+                <img src="images/portfolio-img1.jpg" alt="">
+                <div class="port_hover ph1">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bx bx6_gly">
+                <img src="images/portfolio-img6.jpg" alt="">
+                <div class="port_hover ph6">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="bx10_gly">
-                <img src="" alt="">
-                <div class="port_hover">
-                  <h3>>UX DESIGN</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+              <div class="bx bx2_gly">
+                <img src="images/portfolio-img2.jpg" alt="">
+                <div class="port_hover ph2">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="bx bx5_gly">
+                <img src="images/portfolio-img5.jpg" alt="">
+                <div class="port_hover ph5">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div id="wordpress_gly" class="tabcontent wordpress_gly">
+
+              <div class="bx bx1_gly">
+                <img src="images/portfolio-img1.jpg" alt="">
+                <div class="port_hover ph1">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx bx2_gly">
+                <img src="images/portfolio-img2.jpg" alt="">
+                <div class="port_hover ph2">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx bx7_gly">
+                <img src="images/portfolio-img7.jpg" alt="">
+                <div class="port_hover ph7">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx bx8_gly">
+                <img src="images/portfolio-img8.jpg" alt="">
+                <div class="port_hover ph8">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="mobile_gly" class="tabcontent mobile_gly">
+
+              <div class="bx bx4_gly">
+                <img src="images/portfolio-img1.jpg" alt="">
+                <div class="port_hover ph1">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx bx5_gly">
+                <img src="images/portfolio-img2.jpg" alt="">
+                <div class="port_hover ph2">
+                  <div>
+                    <h3>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx bx9_gly">
+                <img src="images/pexels-pixabay-39284.jpg" alt="">
+                <div class="port_hover ph9">
+                  <div>
+                    <h3>>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx bx10_gly">
+                <img src="images/pexels-pixabay-270360.jpg" alt="">
+                <div class="port_hover ph10">
+                  <div>
+                    <h3>>UX DESIGN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+                  </div>
                 </div>
               </div>
 
@@ -343,7 +440,7 @@
       <!-- END OF PORTFOLIO SECTION -->
 
       <!-- SKILLS SECTION -->
-      <div class="skills">
+      <div class="skills" id="skills">
         <div class="subskill">
 
           <div class="myprofile">
@@ -402,7 +499,7 @@
       <!-- END OF SKILLS SECTION -->
 
       <!-- ABOUT ME SECTION -->
-      <div class="about">
+      <div class="about" id="about">
         <div class="sub_about">
           <div class="about_text">
             <div class="about_head"><p>THIS IS <strong>ME</strong></p></div>
@@ -417,7 +514,7 @@
       <!-- END OF ABOUT ME SECTION -->
 
       <!-- CONTACT US SECTION -->
-      <div class="contact_us">
+      <div class="contact_us" id="contact">
         <div class="sub_contact_us">
           <div class="facebook">
             <div class="fbk_sec">
@@ -460,7 +557,7 @@
       <!-- END OFCONTACT US SECTION -->
 
       <!--  DROP LINE  SECTION -->
-      <div class="drop_line">
+      <div class="drop_line" id="drop_line">
         <div class="sub_drop_line">
           <div class="drop_line_head"><h2>DROP <strong> ME A LINE</strong></h2></div>
           <div class="drop_line_form">

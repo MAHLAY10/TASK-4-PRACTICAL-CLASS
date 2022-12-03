@@ -1,4 +1,4 @@
- /*
+/*
     !-- INDICATING DEFAULT STYLING FOR WEBPAGE
   */
 *{
@@ -7,16 +7,27 @@
     box-sizing: border-box;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 999;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box ;
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 html{
     width: 100%;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 
@@ -35,7 +46,7 @@ html{
     background-repeat: no-repeat;
 }
 
- /*
+/*
     INDICATING MOBILE SCREENS - MOBILE, GALAXY ETC
   */
 .title1,
@@ -115,6 +126,7 @@ nav > div {
     align-items: center;
     width: 100%;
     max-width: 100%;
+    padding-top: 10px;
 } 
 nav div .logo{
     display: flex;
@@ -142,6 +154,7 @@ nav div .hamMenu img{
     font-weight: 600;
     text-align: left;
 }
+
 nav div .menu{
     align-items: center;
     box-sizing: border-box;
@@ -171,10 +184,26 @@ nav div .menu ul li a{
     line-height: 1.5;
     text-align: left;
 }  
+
 .desktop_menu{
-    display: none !important;
+    margin-left: 100px;
+    margin-right: 50px;
+    text-transform: uppercase;
+}
+
+.desktop_menu ul li:hover a,
+.desktop_menu ul li:active a{
+    color: orangered;
+}
+
+.desktop_menu{
+    display: none;
+}
+.show{
+    max-height: 100% !important;
 }
 .mobile_menu{
+    text-transform: uppercase;
     position: absolute;
     top: 0;
     left: 0;
@@ -182,7 +211,11 @@ nav div .menu ul li a{
     max-width: 100%;
     background: #fff;
     width: auto;
-    display:none;
+    width: 100%;
+    height: fit-content;
+    max-height: 0%;
+    overflow: hidden;
+    transition: .8s ease all;
     padding: 0;
     height: 100vh;
     height: 100%;
@@ -194,6 +227,7 @@ nav div .menu ul li a{
    flex-direction: column;
    width: 100%;
    max-width: 100%;
+   margin-top: 20px;
 }
 .mobile_menu ul li:hover a{
     color: orangered;
@@ -213,7 +247,7 @@ nav div .menu ul li a{
 
 }
 nav div .hamMenu {
-    display: block !important;
+    display: block;
     z-index: 999;
 }
 nav div .hamMenu :nth-child(2) {
@@ -233,7 +267,7 @@ nav div .hamMenu :nth-child(2):hover {
     
 }
 
-/* HEROE SECTION */
+/* HERO SECTION */
 .hero {
     display: flex;
     align-items: center;
@@ -377,6 +411,10 @@ input[type=radio]{
     transition-duration: 1s;
     background-color: orangered;
 }
+.port_tabs .active{
+    color: white !important;
+    background-color: orangered !important;
+}
 
 .port_tabs .all_tab{
     width: 100%;
@@ -409,7 +447,13 @@ input[type=radio]{
     gap: 0px;
 }
 
-.all_gly{
+
+
+.all_gly,
+.html_gly,
+.wordpress_gly,
+.mobile_gly,
+.photoshop_gly{
     height: 100%;
     width: 100%;
     display: grid;
@@ -417,39 +461,75 @@ input[type=radio]{
     gap: 0px;
 }
 
-.all_gly img{
+.tabcontent{
+    display: none;
+    
+}
+.tabcontent .bx{
+    animation-name: scalebox;
+    animation-timing-function: ease-out;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    transition: .8s ease-out all;
+}
+
+
+/* ADDING ANIMATION TO SCALE BOXES */
+@keyframes scalebox {
+    0% {
+        transform: scale(-1);
+        /* transform: rotate(0deg); */
+    }
+    100% {
+        transform: scale(1);
+        /* transform: rotate(0deg); */
+    }
+}
+
+
+.ativecontent,
+.showcontent{
+    display: grid;
+}
+
+.all_gly img,
+.html_gly img,
+.wordpress_gly img,
+.mobile_gly img,
+.photoshop_gly img
+{
     width: 100%;
 
 }
 
-.all_gly .bx1_gly:hover .ph1{
+.bx1_gly:hover .ph1{
     display: block !important;   
 }
-.all_gly .bx2_gly:hover .ph2{
+.bx2_gly:hover .ph2{
     display: block !important;   
 }
-.all_gly .bx3_gly:hover .ph3{
+.bx3_gly:hover .ph3{
     display: block !important;   
 }
-.all_gly .bx4_gly:hover .ph4{
+.bx4_gly:hover .ph4{
     display: block !important;   
 }
-.all_gly .bx5_gly:hover .ph5{
+.bx5_gly:hover .ph5{
     display: block !important;   
 }
-.all_gly .bx6_gly:hover .ph6{
+.bx6_gly:hover .ph6{
     display: block !important;   
 }
-.all_gly .bx7_gly:hover .ph7{
+.bx7_gly:hover .ph7{
     display: block !important;   
 }
-.all_gly .bx8_gly:hover .ph8{
+.bx8_gly:hover .ph8{
     display: block !important;   
 }
-.all_gly .bx9_gly:hover .ph9{
+.bx9_gly:hover .ph9{
     display: block !important;   
 }
-.all_gly .bx10_gly:hover .ph10{
+.bx10_gly:hover .ph10{
     display: block !important;   
 }
 
@@ -570,7 +650,7 @@ input[type=radio]{
     background-image: url('/images/pexels-gdtography-911738.jpg');
     background-size: cover;
     width: 100%;
-    height: 39rem;
+    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -836,6 +916,16 @@ input[type=radio]{
     }
 /* END OF HERO SECTION */
 
+    .desktop_menu {
+        display: flex;
+        z-index: 9999999;
+    }
+    nav div .logo{
+        z-index: 9999999;
+    }
+    nav div .hamMenu {
+        display: none;
+    }
 /* MY WORK SECTION */
     .myw_sib .title{
         padding-left: 200px;
@@ -875,8 +965,12 @@ input[type=radio]{
         padding-right: 400px;
     }
 
-    .all_gly{
-        display: grid;
+    .all_gly,
+    .html_gly,
+    .wordpress_gly,
+    .mobile_gly,
+    .photoshop_gly{
+        /* display: grid; */
         grid-template-columns: auto auto auto auto;
     }
 /* END OF PORTFOLIO SECTION*/
@@ -907,7 +1001,7 @@ input[type=radio]{
 /* ABOUT ME SECTION */
 .sub_about{
     margin-right: 100px;
-    margin-left: 50%;
+    margin-left: 40%;
 }
 .about{
     padding-bottom: 100px;
@@ -931,6 +1025,11 @@ input[type=radio]{
     .drop_line .sub_drop_line .drop_line_form form{
         padding-left: 17%;
         padding-right: 17%;
+    }
+
+    .group6{
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
 
